@@ -10,9 +10,12 @@ export default function Portfolio(){
                 <title>Portfolio</title>
             </Head>
 
-            <Flex height="100vh" justifyContent="center" background="gray.100">
+            <Flex direction="column" height="100vh" justifyContent="center" alignItems="center" background="blue.50">
 
-                <Heading> Portfolio </Heading>
+                <Heading size="md">Sitio en construcción...</Heading>
+                <Flex height={450} width={450} justifyContent="center">
+                    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_qcrbuch7.json" background="transparent" speed="0.5" loop autoplay></lottie-player>
+                </Flex>
 
             </Flex>
         </>

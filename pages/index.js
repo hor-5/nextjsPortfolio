@@ -1,7 +1,7 @@
 import { Flex, Heading, Button } from '@chakra-ui/react'
 import Link from 'next/link'
 import Head from 'next/head'
-import Script from 'next/script'
+
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
         <title>Heraut</title>       
       </Head>
 
-      <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
+      
 
       <Flex boxShadow="md" background="orange.200" height="100vh" alignItems="center" justifyContent="center">
         <Flex direction="column" background="gray.100" p={12} rounded={10}>
