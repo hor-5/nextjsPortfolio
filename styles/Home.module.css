@@ -1,0 +1,11 @@
+.lottie{
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+}
+@media(max-width: 600px){
+    .lottie{
+        width: 200px;
+        height: 200px;        
+    }
+}

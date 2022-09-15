@@ -13,7 +13,7 @@ export default function Portfolio(){
             <Flex direction="column" height="100vh" justifyContent="center" alignItems="center" background="blue.50">
 
                 <Heading size="md">Sitio en construcción...</Heading>
-                <Flex height="50%" width="50%" justifyContent="center">
+                <Flex height="350" width="300" justifyContent="center">
                     <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_qcrbuch7.json" background="transparent" speed="0.5" loop autoplay></lottie-player>
                 </Flex>
 
