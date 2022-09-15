@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Head>
         <title>Heraut</title>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
       </Head>
       <Flex boxShadow="md" background="orange.200" height="100vh" alignItems="center" justifyContent="center">
         <Flex direction="column" background="gray.100" p={12} rounded={10}>
