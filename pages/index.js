@@ -7,9 +7,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Heraut</title>
-        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
+        <title>Heraut</title>       
       </Head>
+
+      <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
+
       <Flex boxShadow="md" background="orange.200" height="100vh" alignItems="center" justifyContent="center">
         <Flex direction="column" background="gray.100" p={12} rounded={10}>
           <Heading size="md">Lo sentimos, esta pagina web ya no está disponible </Heading>
@@ -27,7 +29,7 @@ export default function Home() {
         </Flex>
 
         </Flex>
-
+      
       </Flex>
 
     </>
