@@ -9,20 +9,20 @@ import {
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton, useDisclosure, Highlight,
-    useColorModeValue, GridItem, useBoolean,Popover,
-    PopoverTrigger,PopoverContent,PopoverHeader,PopoverBody,PopoverFooter,
-    PopoverCloseButton, PopoverArrow   } from '@chakra-ui/react'
+    useColorModeValue, GridItem, useBoolean,
+    Spacer} from '@chakra-ui/react'
 import { ChevronLeftIcon, ChatIcon } from '@chakra-ui/icons'
 import { Suspense } from 'react'
 import Experiencia from '../../../components/Experiencia'
 import SkillsSection from '../../../components/Skills'
-import {useRef} from 'react'
+import { ColorModeSwitcher } from '../../../components/ColorModeSwitcher'
+
 
 
 export default function Intro() {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const initialRef= useRef()
-    
+
+
     const [skills, isSkills] = useBoolean()
 
 
@@ -35,11 +35,15 @@ export default function Intro() {
             </Head>
 
             <GridItem bg={useColorModeValue('blue.50', 'blue.800')} height='100vh'>
-                <Link href='/Portfolio' >
+                <Flex>
+                    <Link href='/Portfolio' >
 
-                    <ChevronLeftIcon boxSize='10' className='btn-volver' />
+                        <ChevronLeftIcon boxSize='10' className='btn-volver' />
 
-                </Link>
+                    </Link>
+                    <Spacer />
+                    <ColorModeSwitcher />
+                </Flex>
 
 
                 <VStack size='md'>
@@ -50,31 +54,7 @@ export default function Intro() {
                             boxShadow='xl' rounded='xl'>
                             <VStack alignItems='center'>
                                 <WrapItem>
-                                    
-                                    <Popover
-                                        initialFocusRef={initialRef}
-                                        returnFocusOnClose={false}
-                                        isOpen={isOpen}
-                                        onClose={onClose}
-                                        placement='right'
-                                        closeOnBlur={false}
-                                    >
-                                        <PopoverTrigger>
-                                            <Avatar size='xl' boxShadow='md' name='Horacio Capdevila' src='https://i.ibb.co/NSS77bD/1638904799041.jpg' />
-                                        </PopoverTrigger>
-                                        <PopoverContent>
-                                            <PopoverHeader fontWeight='semibold'>{skills? 'Habilidades':'Experiencia'} </PopoverHeader>
-                                            <PopoverArrow />
-                                            
-                                            <PopoverBody>
-                                                {skills? 
-                                                'Tengo conocimiento en diferentes lenguajes de programación, librerias y frameworks.'
-                                                :
-                                                'Tengo experiencia como desarrollador freelance y como vendedor.'}
-                                            </PopoverBody>
-
-                                        </PopoverContent>
-                                    </Popover>
+                                    <Avatar size='xl' boxShadow='md' name='Horacio Capdevila' src='https://i.ibb.co/NSS77bD/1638904799041.jpg' />
 
                                 </WrapItem>
                             </VStack>

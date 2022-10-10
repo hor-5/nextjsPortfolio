@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
       <ChakraProvider>
         <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
         <Grid bg={useColorModeValue('blue.50', 'blue.800')}>          
-          <ColorModeSwitcher justifySelf="flex-end" />          
+                    
           <Component {...pageProps} />          
         </Grid>
       </ChakraProvider>
