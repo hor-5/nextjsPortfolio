@@ -1,0 +1,25 @@
+.loader{
+    background-color: #5af7bd;
+    display: flex;
+    justify-content: center;          
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.css-rotnuz{
+    background-color: #5af7bd21!important;    
+}
+.btn{
+    background-color: #5af7bd!important;
+}
+.btn:hover{
+    background-color: #4edba7!important;
+}
+
+.btn-volver{
+    cursor: pointer;
+}
+.btn-volver:hover{
+    color: #4edba7;
+}
