@@ -49,7 +49,7 @@ export default function Intro() {
                 <VStack size='md'>
                     <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> Sobre mi...</Heading>
                     <ScaleFade initialScale={0.9} in={true} >
-                        <Flex m='25' alignItems='center' p='7' mt='2' direction="row"
+                        <Flex  alignItems='center' p='7' mt='2' direction="row"
                             bg={useColorModeValue('gray.100', 'gray.300')}
                             boxShadow='xl' rounded='xl'>
                             <VStack alignItems='center'>
