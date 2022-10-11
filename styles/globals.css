@@ -26,6 +26,6 @@
 }
 @media(max-width:650px){
     .progLang{
-        height: 20px;
+        height: 20px!important;
     }
 }
