@@ -68,7 +68,7 @@ export default function OverviewSection() {
                     <Image height='100%' width='100%' rounded='3xl' 
                            src='https://www.svgrepo.com/show/303388/java-4-logo.svg'/>                    
                 </GridItem>
-                <GridItem w='100%' h='20' bg='linkedin' rounded='3xl' className='progLang' boxShadow='md'>
+                <GridItem w='100%' h='20' bg='blue.400' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image height='100%' width='100%' rounded='3xl' 
                            src='https://www.svgrepo.com/show/303600/typescript-logo.svg'/>                    
                 </GridItem>                
