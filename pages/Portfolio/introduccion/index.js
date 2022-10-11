@@ -11,10 +11,10 @@ import {
     DrawerCloseButton, useDisclosure, Highlight,
     useColorModeValue, GridItem, useBoolean,
     Spacer} from '@chakra-ui/react'
-import { ChevronLeftIcon, ChatIcon } from '@chakra-ui/icons'
+import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { Suspense } from 'react'
 import Experiencia from '../../../components/Experiencia'
-import SkillsSection from '../../../components/Skills'
+import OverviewSection from '../../../components/Overview'
 import { ColorModeSwitcher } from '../../../components/ColorModeSwitcher'
 
 
@@ -23,7 +23,7 @@ export default function Intro() {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
 
-    const [skills, isSkills] = useBoolean()
+    const [overview, isOverview] = useBoolean()
 
 
     return (
@@ -33,8 +33,8 @@ export default function Intro() {
             <Head>
                 <title>Intro</title>
             </Head>
-
-            <GridItem bg={useColorModeValue('blue.50', 'blue.800')} height='100vh'>
+        
+            <GridItem bg={useColorModeValue('blue.50', 'blue.800')} height='100vh' >
                 <Flex>
                     <Link href='/Portfolio' >
 
@@ -49,7 +49,7 @@ export default function Intro() {
                 <VStack size='md'>
                     <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> Sobre mi...</Heading>
                     <ScaleFade initialScale={0.9} in={true} >
-                        <Flex alignItems='center' p='7' mt='2' direction="row"
+                        <Flex m='25' alignItems='center' p='7' mt='2' direction="row"
                             bg={useColorModeValue('gray.100', 'gray.300')}
                             boxShadow='xl' rounded='xl'>
                             <VStack alignItems='center'>
@@ -62,7 +62,7 @@ export default function Intro() {
                                 <Text p='3' alignItems='center' fontSize='md'
                                     color='blue.700'>
                                     Soy <Highlight query={['Horacio', 'Capdevila']} styles={{ fontWeight: 'bold', color: 'teal' }}>Horacio Capdevila</Highlight>, estudiante avanzado de analisis de sistemas y desarrollador web
-                                    <br />Soy una persona persistente, siempre en busqueda de aprender y mejorar mis habilidades.<br />
+                                    <br />Soy una persona detallista, que siempre busca aprender y mejorar mis habilidades.<br />
                                     Actualmente estoy buscando un cambio laboral que me permita crecer personal y profesionalmente.
                                 </Text>
 
@@ -73,10 +73,10 @@ export default function Intro() {
                                         rounded='full'
                                         color='whiteAlpha.900'
                                         onClick={() => {
-                                            isSkills.on()
+                                            isOverview.on()
                                             onOpen()
                                         }}>
-                                        Skills
+                                        Overview
                                     </Button>
 
                                     <Button className='btn'
@@ -86,7 +86,7 @@ export default function Intro() {
                                         color='whiteAlpha.900'
 
                                         onClick={() => {
-                                            isSkills.off()
+                                            isOverview.off()
                                             onOpen()
                                         }}>
 
@@ -110,7 +110,13 @@ export default function Intro() {
 
                 </VStack>
 
+            <Flex >
+
+            </Flex>
+            
+
             </GridItem>
+
 
 
             <Drawer onClose={onClose} isOpen={isOpen} size='lg' >
@@ -119,12 +125,12 @@ export default function Intro() {
                     <DrawerCloseButton />
                     <DrawerHeader bg={useColorModeValue('gray.100', 'blue.900')}
                         color={useColorModeValue("blue.700", 'whiteAlpha.900')}>
-                        {skills ? 'Skills' : 'Experiencia'}
+                        {overview ? 'Paneo general' : 'Experiencia'}
                     </DrawerHeader>
                     <DrawerBody bg={useColorModeValue('gray.100', 'blue.900')}
                         color={useColorModeValue("blue.700", 'whiteAlpha.900')}>
-                        {skills ?
-                            <SkillsSection /> :
+                        {overview ?
+                            <OverviewSection /> :
                             <Experiencia />
                         }
 

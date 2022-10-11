@@ -7,9 +7,6 @@
     z-index: 1000;
 }
 
-.css-rotnuz{
-    background-color: #5af7bd21!important;    
-}
 .btn{
     background-color: #5af7bd!important;
 }
@@ -22,4 +19,8 @@
 }
 .btn-volver:hover{
     color: #4edba7;
+}
+
+.progLang:hover{
+    opacity: 80%;    
 }
