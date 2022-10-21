@@ -2,7 +2,7 @@ body{
     background-color: #ebf8ff!important;
 }
 .loader{
-    background-color: #5af7bd;
+    background-color: #ebf8ff;
     padding: 2% 30% 5% 30% ;
     position :absolute;
     display: flex;    
