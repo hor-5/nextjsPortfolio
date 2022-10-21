@@ -4,9 +4,34 @@ import Link from 'next/link'
 import { Flex, Heading, Skeleton, 
         Box, Button, VStack, Text, 
         SlideFade,useColorModeValue,GridItem} from '@chakra-ui/react'
-import { Suspense } from 'react'
+import { Suspense,lazy } from 'react'
 import { ColorModeSwitcher } from '../../components/ColorModeSwitcher'
+import dynamic from 'next/dynamic'
+const Lottie = dynamic(()=>import('react-lottie'))
+import * as animationData from '../../public/lottie-files/home.json'
 
+//Lotie animation
+function HomeLottie() {
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
+    return (
+        <>
+            <Lottie options={defaultOptions}
+                height={400}
+                width={400}/>
+        </>
+    )
+}
+
+//main component
 export default function Portfolio() {
 
     return (
@@ -21,8 +46,8 @@ export default function Portfolio() {
                     </Flex>
                     <Flex height="350" width="300" justifyContent="center">
                         <Suspense fallback={<Skeleton height="200px" width="200px" />} >
-                            <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_dlw10cqe.json" background="transparent" speed="0.5" loop autoplay></lottie-player>
-                        </Suspense>
+                            <HomeLottie/>
+                        </Suspense>                        
                     </Flex>
                     <VStack>
                         <Heading textAlign='center'

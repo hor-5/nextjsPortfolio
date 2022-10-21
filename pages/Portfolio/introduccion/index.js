@@ -10,15 +10,39 @@ import {
     DrawerContent,
     DrawerCloseButton, useDisclosure, Highlight,
     useColorModeValue, GridItem, useBoolean,
-    Spacer} from '@chakra-ui/react'
+    Spacer, SkeletonCircle, CircularProgress} from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { Suspense } from 'react'
 import Experiencia from '../../../components/Experiencia'
 import OverviewSection from '../../../components/Overview'
 import { ColorModeSwitcher } from '../../../components/ColorModeSwitcher'
+import dynamic from 'next/dynamic'
+const Lottie = dynamic(()=>import('react-lottie'))
+import * as animationData from '../../../public/lottie-files/computer.json'
+import {RiLinkedinFill, RiGithubLine} from "react-icons/ri"
 
+//Lotie animation
+function ComputerLottie() {
 
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
 
+    return (
+        <>
+            <Lottie options={defaultOptions}
+                height={200}
+                width={200}/>
+        </>
+    )
+}
+
+//main component
 export default function Intro() {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -49,12 +73,14 @@ export default function Intro() {
                 <VStack size='md'>
                     <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> Sobre mi...</Heading>
                     <ScaleFade initialScale={0.9} in={true} >
-                        <Flex  alignItems='center' p='7' mt='2' direction="row"
+                        <Flex alignItems='center' p='7' mt='2' direction="row"
                             bg={useColorModeValue('gray.100', 'gray.300')}
                             boxShadow='xl' rounded='xl'>
                             <VStack alignItems='center'>
                                 <WrapItem>
-                                    <Avatar size='xl' boxShadow='md' name='Horacio Capdevila' src='https://i.ibb.co/NSS77bD/1638904799041.jpg' />
+                                    <Suspense fallback={<SkeletonCircle size='30' />}>
+                                        <Avatar size='xl' boxShadow='md' name='Horacio Capdevila' src='https://i.ibb.co/NSS77bD/1638904799041.jpg' />
+                                    </Suspense>
 
                                 </WrapItem>
                             </VStack>
@@ -98,8 +124,8 @@ export default function Intro() {
 
                             </VStack>
                             <Flex height="250" width="250" justifyContent="center">
-                                <Suspense fallback={<Skeleton height="200px" width="200px" />} >
-                                    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_w51pcehl.json" background="transparent" speed="0.5" loop autoplay></lottie-player>
+                                <Suspense fallback={<CircularProgress isIndeterminate color='teal.400' />} >
+                                    <ComputerLottie/>
                                 </Suspense>
                             </Flex>
 
@@ -110,8 +136,15 @@ export default function Intro() {
 
                 </VStack>
 
-            <Flex >
+            <Flex justifyContent='center' mt='30'>
 
+                  <a href='https://www.github.com/hor-5' target="_blank">
+                    <Button colorScheme='gray' variant='outline' rounded='full' m='1'> <RiGithubLine fontSize="30"/> </Button>
+                  </a>                     
+                  <a href='https://www.linkedin.com/in/horacio-capdevila-b8aa666b/' target="_blank">
+                    <Button colorScheme='linkedin' rounded='full' m='1'> <RiLinkedinFill fontSize="20"/> </Button>
+                  </a>                     
+                
             </Flex>
             
 
@@ -130,7 +163,8 @@ export default function Intro() {
                     <DrawerBody bg={useColorModeValue('gray.100', 'blue.900')}
                         color={useColorModeValue("blue.700", 'whiteAlpha.900')}>
                         {overview ?
-                            <OverviewSection /> :
+                            <OverviewSection /> 
+                                    :
                             <Experiencia />
                         }
 

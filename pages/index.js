@@ -3,8 +3,37 @@ import { Flex, Heading, Button,
         useColorModeValue } from '@chakra-ui/react'
 import Link from 'next/link'
 import Head from 'next/head'
-import {Suspense} from 'react'
+import {Suspense, lazy} from 'react'
+import dynamic from 'next/dynamic'
+const Lottie = dynamic(()=>import('react-lottie'))
+import * as animationData from '../public/lottie-files/heraut404.json'
+//import Lottie from 'react-lottie';
 
+
+//Lotie animation
+function HerautLottie() {
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
+    return (
+        <>
+         
+          <Suspense fallback={<CircularProgress mt='20' isIndeterminate color='blue.500' />}>         
+              <Lottie options={defaultOptions}
+                  height={350}
+                  width={300}/>         
+          </Suspense>
+        
+        </>
+    )
+}
 
 export default function Home() {
   return (
@@ -20,9 +49,9 @@ export default function Home() {
             <Heading size="md">Lo sentimos, esta pagina web ya no está disponible </Heading>
 
             <Flex with="300" height="350" justifyContent="center">
-            <Suspense fallback={<CircularProgress isIndeterminate color='blue.500' />}>
-              <lottie-player src="https://lottie.host/054bd1fc-7cbf-44d2-b797-e697fa9c9fe4/OFZXmKh7r3.json" background="transparent" speed="0.5" loop autoplay></lottie-player>
-            </Suspense>
+            
+              <HerautLottie/>
+            
             </Flex>
             <Flex justifyContent="center">
               <Link href='/Portfolio'>

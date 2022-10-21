@@ -1,9 +1,7 @@
 import { ChakraProvider,Grid,useColorModeValue } from '@chakra-ui/react'
-import Script from 'next/script'
 import Router from 'next/router'
 import { useState } from 'react'
 import Loader from '../components/Loader'
-import { ColorModeSwitcher } from '../components/ColorModeSwitcher'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -16,8 +14,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {loading && <Loader />}
-      <ChakraProvider>
-        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
+      <ChakraProvider>        
         <Grid bg={useColorModeValue('blue.50', 'blue.800')}>          
                     
           <Component {...pageProps} />          
