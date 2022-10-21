@@ -138,10 +138,10 @@ export default function Intro() {
 
             <Flex justifyContent='center' mt='30'>
 
-                  <a href='https://www.github.com/hor-5' target="_blank">
+                  <a href='https://www.github.com/hor-5' target="_blank" rel="noreferrer">
                     <Button colorScheme='black' variant='outline' rounded='full' m='1' p='0'> <RiGithubLine fontSize="25"/> </Button>
                   </a>                     
-                  <a href='https://www.linkedin.com/in/horacio-capdevila-b8aa666b/' target="_blank">
+                  <a href='https://www.linkedin.com/in/horacio-capdevila-b8aa666b/' target="_blank" rel="noreferrer">
                     <Button color={useColorModeValue("white","blue.800")} colorScheme='linkedin' rounded='full' m='1'p='0'> <RiLinkedinFill fontSize="22"/> </Button>
                   </a>                     
                 
