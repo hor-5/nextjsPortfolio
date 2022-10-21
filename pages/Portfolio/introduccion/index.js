@@ -75,7 +75,7 @@ export default function Intro() {
                     <ScaleFade initialScale={0.9} in={true} >
                         <Flex alignItems='center' p='7' mt='2' direction="row"
                             bg={useColorModeValue('gray.100', 'gray.300')}
-                            boxShadow='xl' rounded='xl'>
+                            boxShadow='xl' rounded='xl' m='2'>
                             <VStack alignItems='center'>
                                 <WrapItem>
                                     <Suspense fallback={<SkeletonCircle size='30' />}>
@@ -123,7 +123,7 @@ export default function Intro() {
                                 </Flex>
 
                             </VStack>
-                            <Flex height="250" width="250" justifyContent="center">
+                            <Flex height="250" width="250" justifyContent="center" className='computerLottie'>
                                 <Suspense fallback={<CircularProgress isIndeterminate color='teal.400' />} >
                                     <ComputerLottie/>
                                 </Suspense>

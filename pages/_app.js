@@ -11,12 +11,13 @@ function MyApp({ Component, pageProps }) {
   Router.events.on('routeChangeStart', () => setLoading(true))
   Router.events.on('routeChangeComplete', () => setLoading(false))
 
+
+
   return (
     <>
       {loading && <Loader />}
       <ChakraProvider>        
-        <Grid bg={useColorModeValue('blue.50', 'blue.800')}>          
-                    
+        <Grid bg={useColorModeValue('blue.50', 'blue.800')} height='100vh' width='100vw'>                 
           <Component {...pageProps} />          
         </Grid>
       </ChakraProvider>
