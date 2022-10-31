@@ -37,6 +37,7 @@ export default function CardProyecto(props) {
           <Image
             src={props.image}
             layout='fill'
+            alt={props.title}
           />
         </Box>
         <Stack>

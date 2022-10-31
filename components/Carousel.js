@@ -63,7 +63,7 @@ export default function Carousel(props) {
                          rounded='3xl' 
                          boxShadow='md' 
                          src="https://www.jetbrains.com/_assets/www/code-with-me/img/screenshots/feature_rich_remote_dev.e22e03d78e9e821a7c8f7ca04218d117.png" 
-                         className="d-block w-100" alt="Exotic Fruits" />
+                         className="d-block w-100" alt="Try" />
                 </div>
 
               </SlideFade>
