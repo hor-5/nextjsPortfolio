@@ -15,7 +15,7 @@ export default function SectionProyectos() {
 
     switch (tecnologia) {
         case "todo":
-            var Menu = () => {
+            Menu = () => {
                 return(
                     <>
                     
@@ -107,7 +107,7 @@ export default function SectionProyectos() {
             }
             break;
         case "react":
-            var Menu = () => {
+            Menu = () => {
                 return(
                     <>
                     
@@ -199,7 +199,7 @@ export default function SectionProyectos() {
             }
             break;
         case "php":
-            var Menu = () => {
+            Menu = () => {
                 return(
                     <>
                     
@@ -291,7 +291,7 @@ export default function SectionProyectos() {
             }
             break;
         case "C#":
-            var Menu = () => {
+            Menu = () => {
                 return(
                     <>
                     
@@ -383,7 +383,7 @@ export default function SectionProyectos() {
             }
             break;
         case "java":
-            var Menu = () => {
+            Menu = () => {
                 return(
                     <>
                     
@@ -475,7 +475,7 @@ export default function SectionProyectos() {
             }
             break;
         case "python":
-            var Menu = () => {
+            Menu = () => {
                 return(
                     <>
                     

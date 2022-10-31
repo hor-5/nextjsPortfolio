@@ -159,7 +159,7 @@ export default function Intro() {
                     <Divider/>
                 <Flex justifyContent='end' m='4'>
                     <Link href='/Portfolio/proyectos'>
-                        <Button colorScheme="teal" rounded="xl"> Ver últimos proyectos <RiTerminalBoxLine /> </Button>
+                        <Button colorScheme="teal" rounded="xl"> Ver proyectos <RiTerminalBoxLine /> </Button>
                     </Link>                   
                 </Flex>                         
 

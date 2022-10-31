@@ -6,8 +6,6 @@ import {
     Spacer,
     Flex,
     useColorModeValue,
-    HStack,
-    Button
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "../../../components/ColorModeSwitcher"
 import { ChevronLeftIcon } from '@chakra-ui/icons'
