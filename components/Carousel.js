@@ -8,7 +8,7 @@ import {
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion'
 import { useState } from 'react'
 
-export default function Carousel() {
+export default function Carousel(props) {
 
   const [selectedImg, setSelectedImg] = useState(null)
   

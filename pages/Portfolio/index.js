@@ -9,6 +9,7 @@ import { ColorModeSwitcher } from '../../components/ColorModeSwitcher'
 import dynamic from 'next/dynamic'
 const Lottie = dynamic(()=>import('react-lottie'))
 import * as animationData from '../../public/lottie-files/home.json'
+import Carousel from '../../components/Carousel'
 
 //Lotie animation
 function HomeLottie() {
@@ -40,7 +41,7 @@ export default function Portfolio() {
                 <title>Inicio</title>
             </Head>
             <SlideFade in={true} offsetY='50px'>
-                <GridItem direction="row" height="100vh" justifyContent="center" alignItems="center" bg={useColorModeValue("blue.50",'blue.800')}>
+                <GridItem direction="row" height="100vh" justifyContent="center" alignItems="center" bg={useColorModeValue("teal.50",'blue.800')}>
                     <Flex justifyContent='end'>
                         <ColorModeSwitcher/>
                     </Flex>
@@ -67,6 +68,7 @@ export default function Portfolio() {
 
                     </VStack>
 
+                    
 
                 </GridItem>
             </SlideFade>

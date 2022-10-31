@@ -10,16 +10,18 @@ import {
     DrawerContent,
     DrawerCloseButton, useDisclosure, Highlight,
     useColorModeValue, GridItem, useBoolean,
-    Spacer, SkeletonCircle, CircularProgress} from '@chakra-ui/react'
+    Spacer, SkeletonCircle, CircularProgress, 
+    Divider
+} from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 import { Suspense } from 'react'
 import Experiencia from '../../../components/Experiencia'
 import OverviewSection from '../../../components/Overview'
 import { ColorModeSwitcher } from '../../../components/ColorModeSwitcher'
 import dynamic from 'next/dynamic'
-const Lottie = dynamic(()=>import('react-lottie'))
+const Lottie = dynamic(() => import('react-lottie'))
 import * as animationData from '../../../public/lottie-files/computer.json'
-import {RiLinkedinFill, RiGithubLine} from "react-icons/ri"
+import { RiLinkedinFill, RiGithubLine,RiDownloadFill,RiTerminalBoxLine } from "react-icons/ri"
 
 //Lotie animation
 function ComputerLottie() {
@@ -37,7 +39,7 @@ function ComputerLottie() {
         <>
             <Lottie options={defaultOptions}
                 height={200}
-                width={200}/>
+                width={200} />
         </>
     )
 }
@@ -57,8 +59,8 @@ export default function Intro() {
             <Head>
                 <title>Intro</title>
             </Head>
-        
-            <GridItem bg={useColorModeValue('blue.50', 'blue.800')} height='100vh' >
+
+            <GridItem bg={useColorModeValue('teal.50', 'blue.800')} height='100vh' >
                 <Flex>
                     <Link href='/Portfolio' >
 
@@ -74,7 +76,7 @@ export default function Intro() {
                     <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> Sobre mi...</Heading>
                     <ScaleFade initialScale={0.9} in={true} >
                         <Flex alignItems='center' p='7' mt='2' direction="row"
-                            bg={useColorModeValue('gray.100', 'gray.300')}
+                            bg={useColorModeValue('gray.50', 'gray.300')}
                             boxShadow='xl' rounded='xl' m='2'>
                             <VStack alignItems='center'>
                                 <WrapItem>
@@ -125,7 +127,7 @@ export default function Intro() {
                             </VStack>
                             <Flex height="250" width="250" justifyContent="center" className='computerLottie'>
                                 <Suspense fallback={<CircularProgress isIndeterminate color='teal.400' />} >
-                                    <ComputerLottie/>
+                                    <ComputerLottie />
                                 </Suspense>
                             </Flex>
 
@@ -136,17 +138,30 @@ export default function Intro() {
 
                 </VStack>
 
-            <Flex justifyContent='center' mt='30'>
+                <Flex justifyContent='center' mt='30'>
 
-                  <a href='https://www.github.com/hor-5' target="_blank" rel="noreferrer">
-                    <Button colorScheme='black' variant='outline' rounded='full' m='1' p='0'> <RiGithubLine fontSize="25"/> </Button>
-                  </a>                     
-                  <a href='https://www.linkedin.com/in/horacio-capdevila-b8aa666b/' target="_blank" rel="noreferrer">
-                    <Button color={useColorModeValue("white","blue.800")} colorScheme='linkedin' rounded='full' m='1'p='0'> <RiLinkedinFill fontSize="22"/> </Button>
-                  </a>                     
-                
-            </Flex>
-            
+                    <a href='https://www.github.com/hor-5' target="_blank" rel="noreferrer">
+                        <Button colorScheme='black' variant='outline' rounded='full' m='1' p='0'> <RiGithubLine fontSize="25" /> </Button>
+                    </a>
+                    <a href='https://www.linkedin.com/in/horacio-capdevila-b8aa666b/' target="_blank" rel="noreferrer">
+                        <Button color={useColorModeValue("white", "blue.800")} colorScheme='linkedin' rounded='full' m='1' p='0'> <RiLinkedinFill fontSize="22" /> </Button>
+                    </a>
+
+                </Flex>
+
+                <VStack justifySelf='center'>
+
+                    <a href='https://urlis.net/vtcz87j' target="_blank" rel="noopener noreferrer">
+                        <Button m='2' colorScheme='blue' rounded='full'> Descargar CV  <RiDownloadFill/></Button>
+                    </a>
+                </VStack>
+
+                    <Divider/>
+                <Flex justifyContent='end' m='4'>
+                    <Link href='/Portfolio/proyectos'>
+                        <Button colorScheme="teal" rounded="xl"> Ver últimos proyectos <RiTerminalBoxLine /> </Button>
+                    </Link>                   
+                </Flex>                         
 
             </GridItem>
 
@@ -163,8 +178,8 @@ export default function Intro() {
                     <DrawerBody bg={useColorModeValue('gray.100', 'blue.900')}
                         color={useColorModeValue("blue.700", 'whiteAlpha.900')}>
                         {overview ?
-                            <OverviewSection /> 
-                                    :
+                            <OverviewSection />
+                            :
                             <Experiencia />
                         }
 
