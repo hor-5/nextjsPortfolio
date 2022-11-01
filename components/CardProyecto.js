@@ -8,7 +8,8 @@ import {
   Image,
   HStack,
   IconButton,
-  ButtonGroup
+  ButtonGroup,
+  Divider,
 } from '@chakra-ui/react';
 import { VscGithub, VscInspect } from "react-icons/vsc";
 
@@ -16,10 +17,14 @@ export default function CardProyecto(props) {
 
 
   return (
-    <Center py={6}>
+    <Center py={6}
+            _hover={{
+              transform: 'translateY(-5px)',      
+              transition:'0.7s',
+            }} >
       <Box
-        minH='400px'
-        maxH='550px'
+        minH='430px'
+        maxH='430px'
         maxW='300px'
         w='full'
         bg={useColorModeValue('white', 'gray.900')}
@@ -64,7 +69,9 @@ export default function CardProyecto(props) {
 
           </Text>
         </Stack>
-        <HStack m='2' justifyContent='end' justifyItems='end'>
+
+        <Divider my='2'/>
+        <HStack mt='auto' justifyContent='end'>
           <ButtonGroup spacing='6'>
             <a href={props.linkGithub} target="_blank" rel="noreferrer">
               <IconButton

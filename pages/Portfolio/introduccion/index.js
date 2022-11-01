@@ -60,7 +60,7 @@ export default function Intro() {
                 <title>Intro</title>
             </Head>
 
-            <GridItem bg={useColorModeValue('teal.50', 'blue.800')} height='100vh' >
+            <GridItem bg={useColorModeValue('blue.50', 'blue.800')} height='100vh' >
                 <Flex>
                     <Link href='/Portfolio' >
 

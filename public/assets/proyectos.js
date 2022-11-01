@@ -73,7 +73,7 @@ export const proyectos =[
         id:5,         
         title:"Supermercado Tkinter",
         tech:"python",
-        images:["https://i.ibb.co/Xjh3X7P/super.jpg"],
+        images:["https://i.ibb.co/WfGZKPy/tkinter.png"],
         linkTestOnline:"",
         linkGitHub:"https://github.com/hor-5/pythonTkinter",
         shortDescription:"App de escritorio para manejo de stock y ventas de un supermercado.",
