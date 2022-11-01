@@ -5,8 +5,7 @@ import { useState } from 'react';
 
 export default function SectionProyectos() {
     const [tecnologia, setTecnologia] = useState('todo');
-    var Contenido = () => { }
-    var Menu = () => {  }
+
     const proyectosReact = proyectos.filter(proyecto => proyecto.tech === "react")
     const proyectosPhp = proyectos.filter(proyecto => proyecto.tech === "php")
     const proyectosCsharp = proyectos.filter(proyecto => proyecto.tech === "C#")
@@ -15,7 +14,7 @@ export default function SectionProyectos() {
 
     switch (tecnologia) {
         case "todo":
-            Menu = () => {
+            var Menu = () => {
                 return(
                     <>
                     
@@ -81,7 +80,7 @@ export default function SectionProyectos() {
                     </>
                 )
             }
-            Contenido = () => {
+            var Contenido = () => {
                 return (
                     <>
                         <SimpleGrid columns={[2, null, 4]} spacing='40px' mx='2'>
@@ -107,7 +106,7 @@ export default function SectionProyectos() {
             }
             break;
         case "react":
-            Menu = () => {
+            var Menu = () => {
                 return(
                     <>
                     
@@ -173,7 +172,7 @@ export default function SectionProyectos() {
                     </>
                 )
             }
-            Contenido = () => {
+            var Contenido = () => {
                 return (
                     <>
                         <SimpleGrid columns={[2, null, 4]} spacing='40px' mx='2'>
@@ -199,7 +198,7 @@ export default function SectionProyectos() {
             }
             break;
         case "php":
-            Menu = () => {
+            var Menu = () => {
                 return(
                     <>
                     
@@ -265,7 +264,7 @@ export default function SectionProyectos() {
                     </>
                 )
             }
-            Contenido = () => {
+            var Contenido = () => {
                 return (
                     <>
                         <SimpleGrid columns={[2, null, 4]} spacing='40px' mx='2'>
@@ -291,7 +290,7 @@ export default function SectionProyectos() {
             }
             break;
         case "C#":
-            Menu = () => {
+            var Menu = () => {
                 return(
                     <>
                     
@@ -357,7 +356,7 @@ export default function SectionProyectos() {
                     </>
                 )
             }
-            Contenido = () => {
+            var Contenido = () => {
                 return (
                     <>
                         <SimpleGrid columns={[2, null, 4]} spacing='40px' mx='2'>
@@ -383,7 +382,7 @@ export default function SectionProyectos() {
             }
             break;
         case "java":
-            Menu = () => {
+            var Menu = () => {
                 return(
                     <>
                     
@@ -449,7 +448,7 @@ export default function SectionProyectos() {
                     </>
                 )
             }
-            Contenido = () => {
+            var Contenido = () => {
                 return (
                     <>
                         <SimpleGrid columns={[2, null, 4]} spacing='40px' mx='2'>
@@ -475,7 +474,7 @@ export default function SectionProyectos() {
             }
             break;
         case "python":
-            Menu = () => {
+            var Menu = () => {
                 return(
                     <>
                     
@@ -541,7 +540,7 @@ export default function SectionProyectos() {
                     </>
                 )
             }
-            Contenido = () => {
+            var Contenido = () => {
                 return (
                     <>
                         <SimpleGrid columns={[2, null, 4]} spacing='40px' mx='2'>
@@ -565,6 +564,10 @@ export default function SectionProyectos() {
                     </>
                 );
             }            
+            break;
+        default:
+            var Menu= ()=>{}
+            var Contenido = ()=>{}
             break;
 
     }

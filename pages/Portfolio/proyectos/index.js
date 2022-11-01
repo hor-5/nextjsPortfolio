@@ -9,8 +9,6 @@ import {
 } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "../../../components/ColorModeSwitcher"
 import { ChevronLeftIcon } from '@chakra-ui/icons'
-//import CardProyecto from '../../../components/CardProyecto'
-
 import SectionProyectos from '../../../components/SectionProyectos'
 
 export default function Proyectos() {
@@ -39,7 +37,7 @@ export default function Proyectos() {
 
 
 
-                <SectionProyectos  />
+                <SectionProyectos />
 
             </GridItem>
 
