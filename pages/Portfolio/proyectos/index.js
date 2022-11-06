@@ -31,8 +31,10 @@ export default function Proyectos() {
                     <Spacer />
                     <ColorModeSwitcher />
                 </Flex>
-                <Flex justifyContent='center' mb='2'>
-                    <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> Algunos proyectos que realicé...</Heading>
+                <Flex justifyContent='center' mb='2' mx='2'>
+                    <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> 
+                        Algunos proyectos que realicé...
+                    </Heading>
                 </Flex>
 
 

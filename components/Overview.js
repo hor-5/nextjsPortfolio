@@ -36,7 +36,7 @@ export default function OverviewSection() {
             <HStack my='2'>
                 <Avatar size='md' boxShadow='md' name='ISTIC' src='https://static.wixstatic.com/media/e1a484_d5641d3797ff4c17b854ab87181af298~mv2.png/v1/fit/w_2500,h_1330,al_c/e1a484_d5641d3797ff4c17b854ab87181af298~mv2.png' />
                 <Heading size='xs'> Instituto Superior Tecnologico Inmaculada Concepción </Heading>
-                <Heading size='xs'> Mayo 2021 - Actualidad </Heading>
+                <Heading size='xs'> Marzo 2021 - Actualidad </Heading>
             </HStack>
             <Text ml='12' mb='2' fontSize='13px' >
                 Realicé proyectos utilizando Python, Java, C# , Kotlin, PHP, HTML, CSS, Postgresql y MySQL.

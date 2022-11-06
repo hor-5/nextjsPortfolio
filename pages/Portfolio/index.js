@@ -63,7 +63,7 @@ export default function Portfolio() {
                             Donde vas a poder conocer un poco sobre mi.
                         </Text>
                         <Link href='/Portfolio/introduccion'>
-                            <Button className='btn' rounded="full" color="whiteAlpha.900">¡Empezemos!</Button>
+                            <Button className='btn' rounded="full" color="whiteAlpha.900">¡Empecemos!</Button>
                         </Link>
 
                     </VStack>
