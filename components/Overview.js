@@ -29,7 +29,7 @@ export default function OverviewSection() {
                 Aprendí los fundamentos de programación y programé mi primera aplicación web utilizando PHP
                 como lenguaje de backend y MySQL como lenguaje de base de datos. Aprendí los fundamentos del framework php Laravel. Aprendí buenas prácticas y convenciones para el desarrollo web.
             </Text>
-            <Divider orientation='hotizontal' />
+            <Divider orientation='horizontal' />
             <Text>
                 Actualmente me encuentro cursando el segundo año de la tecnicatura en analisis de sistemas.
             </Text>

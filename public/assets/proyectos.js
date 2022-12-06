@@ -4,7 +4,7 @@ export const proyectos =[
         title:"Registro de clientes",
         tech:"php",
         images:["https://i.ibb.co/Sfv6wWg/registro-C1.png"],
-        linkTestOnline:"https://registrojson.herokuapp.com",
+        linkTestOnline:"https://registroclientes-production.up.railway.app/",
         linkGitHub:"https://github.com/hor-5/registroClientes",
         shortDescription:"Registro de clientes con login utilizando PHP y Json. HTML/CSS/Bootstrap y Sweet Alert",
         description:"Registro de clientes con login utilizando PHP y Json. HTML/CSS/Bootstrap y Sweet Alert"
@@ -24,7 +24,7 @@ export const proyectos =[
         title:"Listado de usuarios",
         tech:"react",
         images:["https://i.ibb.co/n759Ck3/reactpostcomments.png"],
-        linkTestOnline:"https://postscommentsapp.herokuapp.com/",
+        linkTestOnline:"https://postandcomments.vercel.app/",
         linkGitHub:"https://github.com/hor-5/ReactProject",
         shortDescription:"Consumiendo una API en React. Lectura y creación de usuarios, sus posts y comentarios.",
         description:""
@@ -34,7 +34,7 @@ export const proyectos =[
         title:"Cotizador interactivo",
         tech:"react",
         images:["https://i.ibb.co/MPBLSp8/nuevaoferta.png"],
-        linkTestOnline:"http://nuevaoferta.herokuapp.com/",
+        linkTestOnline:"https://nuevaoferta-production.up.railway.app/",
         linkGitHub:"",
         shortDescription:"Sitio de capacitación con cotizador interactivo, realizado con React js.",
         description:""
@@ -94,7 +94,7 @@ export const proyectos =[
         title:"Listado criptomonedas",
         tech:"angular",
         images:["https://i.ibb.co/QCV0pZK/angularcrypto.png"],
-        linkTestOnline:"https://angularcrypto.herokuapp.com/",
+        linkTestOnline:"https://cryptoangular-production.up.railway.app/",
         linkGitHub:"https://github.com/hor-5/cryptoAngular",
         shortDescription:"Consumiendo información de criptomonedas desde la API de coingecko para frontend Angular.",
         description:"Consumiendo información de criptomonedas desde la API de coingecko para mostrarla en una vista realizada con Angular."
