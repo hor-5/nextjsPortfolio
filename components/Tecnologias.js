@@ -9,6 +9,7 @@ import {
 export default function Tecnologias() {
     return (
         <>
+            <Heading mt='2' size='xs'>Lenguajes de programación</Heading>
             <Grid mt='2' mb='2' templateColumns='repeat(6, 1fr)' gap={6}>
                 <GridItem w='100%' h='20' bg='gray.200' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Javascript' height='100%' width='100%' rounded='3xl'

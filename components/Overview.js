@@ -48,12 +48,13 @@ export default function OverviewSection() {
             </Text>
             <Divider orientation='horizontal' />
             <Heading mt='2' mb='3' size='md' >¿Qué tecnologias manejo?</Heading>
+            
                 <Suspense fallback={<Flex justifyContent='center'>
                                         <CircularProgress isIndeterminate color='#4edba7' />
                                     </Flex>}>
                     <Tecnologias/>
                 </Suspense>
-            <Heading mt='2' size='xs'>Lenguajes de programación</Heading>
+            
             
             <Divider orientation='horizontal' />
             <Heading mt='2' mb='2' size='md'>¿Qué busco actualmente?</Heading>
