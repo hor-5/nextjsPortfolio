@@ -93,7 +93,7 @@ export default function Tecnologias() {
                 </GridItem>
                 <GridItem p='2' w='100%' h='20' bg='white' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Github' height='100%' width='100%'
-                        src='https://newsignature.com/wp-content/uploads/2020/08/github-logo-crop.png' />
+                        src='/assets/github.png' />
                 </GridItem>
             </Grid>
             <Divider orientation='horizontal' />
@@ -110,7 +110,7 @@ export default function Tecnologias() {
                 </GridItem>
                 <GridItem pb='2' pt='2' w='100%' h='20' bg='#29bfb3' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Chakra UI' height='100%' width='100%' rounded='3xl'
-                        src='https://i.ibb.co/2M1GH4T/chakra.png' />
+                        src='/assets/chakraui.png' />
                 </GridItem>
                 <GridItem w='100%' h='20' bg='gray.800' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Bootstrap' height='100%' width='100%' rounded='3xl'
@@ -122,7 +122,7 @@ export default function Tecnologias() {
                 </GridItem>
                 <GridItem pt='2' pb='2' w='100%' h='20' bg='white' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Express js' height='100%' width='100%' rounded='3xl'
-                        src='https://www.donny.pro/img/habilidades/express.svg' />
+                        src='/assets/nodeExpressJs.png' />
                 </GridItem>
                 <GridItem w='100%' h='20' bg='gray.800' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Laravel' height='100%' width='100%' rounded='3xl'

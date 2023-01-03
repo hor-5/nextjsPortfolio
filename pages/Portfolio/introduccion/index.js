@@ -81,7 +81,7 @@ export default function Intro() {
                             <VStack alignItems='center'>
                                 <WrapItem>
                                     <Suspense fallback={<SkeletonCircle size='30' />}>
-                                        <Avatar size='xl' boxShadow='md' name='Horacio Capdevila' src='https://i.ibb.co/NSS77bD/1638904799041.jpg' />
+                                        <Avatar size='xl' boxShadow='md' name='Horacio Capdevila' src='/assets/avatar.png' />
                                     </Suspense>
 
                                 </WrapItem>
