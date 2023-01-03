@@ -16,7 +16,7 @@ export const proyectos =[
         images:["/assets/ABMventas.png"],
         linkTestOnline:"",
         linkGitHub:"https://github.com/hor-5/ABM-Ventas",
-        shortDescription:"Altas, Bajas, y modificaciones con PHP y Mysql, utilizando programación orientada a objetos.",
+        shortDescription:"Altas, Bajas, y modificaciones con php y Mysql, utilizando programación orientada a objetos.",
         description:"Altas, Bajas, y modificaciones con PHP y Mysql, utilizando programación orientada a objetos."
     },
     {     
