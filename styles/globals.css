@@ -1,5 +1,6 @@
 body{
     background-color: #ebf8ff!important;
+    overflow-x: hidden;
 }
 .loader{
     background-color: #ebf8ff;

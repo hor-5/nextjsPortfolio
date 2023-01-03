@@ -29,9 +29,9 @@ export default function Proyectos() {
 
                     </Link>
                     <Spacer />
-                    <ColorModeSwitcher />
+                    <ColorModeSwitcher mx='2' />
                 </Flex>
-                <Flex justifyContent='center' mb='2' mx='2'>
+                <Flex justifyContent='center' marginBottom='4' mx='3'>
                     <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> 
                         Algunos proyectos que realicé...
                     </Heading>
