@@ -82,7 +82,7 @@ export default function OverviewSection() {
             <Divider orientation='horizontal' />
             <Heading mt='2' mb='2' size='md'>Metas</Heading>
             <Text fontSize='14px' mb='7'>
-            Busco seguir creciendo y formándome como profesional de la tecnología y el ecommerce. Mi meta es aprender cada día y convertirme en un referente en mi equipo, aportando el conocimiento adquirido.
+                Busco seguir creciendo y formándome como profesional de la tecnología y el ecommerce. Mi meta es aprender cada día y convertirme en un referente en mi equipo, aportando el conocimiento adquirido.
             </Text>
 
         </>
