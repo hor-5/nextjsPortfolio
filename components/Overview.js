@@ -31,12 +31,12 @@ export default function OverviewSection() {
             </Text>
             <Divider orientation='horizontal' />
             <Text>
-                Actualmente me encuentro cursando el segundo año de la tecnicatura en analisis de sistemas.
+                Realicé la tecnicatura en analisis de sistemas entre 2021 y 2023.
             </Text>
             <HStack my='2'>
                 <Avatar size='md' boxShadow='md' name='ISTIC' src='https://static.wixstatic.com/media/e1a484_d5641d3797ff4c17b854ab87181af298~mv2.png/v1/fit/w_2500,h_1330,al_c/e1a484_d5641d3797ff4c17b854ab87181af298~mv2.png' />
                 <Heading size='xs'> Instituto Superior Tecnologico Inmaculada Concepción </Heading>
-                <Heading size='xs'> Marzo 2021 - Actualidad </Heading>
+                <Heading size='xs'> Marzo 2021 - Julio 2023 </Heading>
             </HStack>
             <Text ml='12' mb='2' fontSize='13px' >
                 Realicé proyectos utilizando Python, Java, C# , Kotlin, PHP, HTML, CSS, Postgresql y MySQL.
@@ -45,6 +45,29 @@ export default function OverviewSection() {
                 Profundicé en la programación orientada a objetos
                 conceptualmente y en la practica.(polimorfismo, encapsulamiento,
                 composición, interfaces, herencia)
+            </Text>
+            <Divider orientation='horizontal' />
+            <Text>
+                Realicé el curso de "Digital Commerce Specialist" y actualmente me encuentro cursando la preparación para "Ecommerce Solution Architect" en EICOM Institute.
+            </Text>
+            <HStack my='2'>
+                <Avatar size='md' boxShadow='md' name='EICOM' src='/assets/eicom_logo.jpg' />
+                <Heading size='xs'> Digital Commerce Specialist </Heading>
+                <Heading size='xs'> Febrero 2023 - Junio 2023 </Heading>
+            </HStack>
+            <Text ml='12' mb='2' fontSize='13px' >
+                Aprendi y apliqué en ejercicios los conceptos de ecommerce.
+                Logré las certificaciones de Commerce Management Executive (CMX) Level 1 y Level 2.
+            </Text>
+            <HStack my='2'>
+                <Avatar size='md' boxShadow='md' name='EICOM' src='/assets/eicom_logo.jpg' />
+                <Heading size='xs'> Ecommerce Solution Architect </Heading>
+                <Heading size='xs'> Agosto 2023 - Actualidad </Heading>
+            </HStack>
+            <Text ml='12' mb='2' fontSize='13px' >
+                Logré la certificación de Commerce Architecture Certification (CAC) level 1.
+                Aprendi como diseñar una arquitectura de ecommerce y acompañar clientes en el proyecto de implementación de la misma de principio a fin.
+                Actualmente nos encontramos aportando a un proyecto como parte de la experiencia profesional del curso.
             </Text>
             <Divider orientation='horizontal' />
             <Heading mt='2' mb='3' size='md' >¿Qué tecnologias manejo?</Heading>
@@ -57,11 +80,9 @@ export default function OverviewSection() {
             
             
             <Divider orientation='horizontal' />
-            <Heading mt='2' mb='2' size='md'>¿Qué busco actualmente?</Heading>
+            <Heading mt='2' mb='2' size='md'>Metas</Heading>
             <Text fontSize='14px' mb='7'>
-                Ganar experiencia, aplicar mis conocimientos y seguir aprendiendo en una empresa moderna, con una cultura innovadora y colaborativa que permita y fomente mi crecimiento y desarrollo personal y profesional. En cuanto a tecnologias y lenguajes
-                me gustaria seguir profundizando en el uso de javascript; utilizando React o NextJs como frontend, y
-                C# .NET como backend.
+            Busco seguir creciendo y formándome como profesional de la tecnología y el ecommerce. Mi meta es aprender cada día y convertirme en un referente en mi equipo, aportando el conocimiento adquirido.
             </Text>
 
         </>

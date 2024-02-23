@@ -10,6 +10,15 @@ export default function Experiencia() {
     return (
         <>
             <HStack my='2'>
+                <Avatar size='md' boxShadow='md' name='VTEX' src='https://vtex.com/wp-content/uploads/2020/04/VTEX-Brand.svg' />
+                <Heading size='md'> VTEX </Heading>
+                <Heading size='xs'> Ene 2023 - Actualidad </Heading>
+            </HStack>
+            <Text ml='12' mb='2' fontSize='14px'>
+            Actualmente, ocupo el puesto de Field Software Engineer en el equipo de APUB en VTEX, donde proporciono apoyo y asistencia técnica a socios y clientes de la plataforma. Este rol me ha brindado la oportunidad de profundizar en el funcionamiento de la plataforma y sus diversos módulos, así como en la interacción entre ellos. Además, he adquirido experiencia en el uso de las APIs de cada módulo y en tecnologías como VTEX IO.
+            </Text>
+            <Divider orientation='horizontal' />
+            <HStack my='2'>
                 <Avatar size='md' boxShadow='md' name='Freelance Developer' src='https://i.pinimg.com/originals/bc/ce/f3/bccef3acf376bba141d56eb0d8fcfc09.jpg' />
                 <Heading size='md'> Freelance Developer </Heading>
                 <Heading size='xs'> Sep 2020 - May 2022 </Heading>
@@ -18,8 +27,8 @@ export default function Experiencia() {
                 Desarrollos web con PHP, Mysql, HTML, CSS y bootstrap.
                 Aplicaciones de escritorio .NET, C#,PostgreSql y WindowsForm.
                 Proyectos academicos.
-                Conocimiento de API Rest. <br/>
-                Librerias frontend React js, Angular. <br /> 
+                Conocimiento de API Rest. <br />
+                Librerias frontend React js, Angular. <br />
                 Gestión de servicios web con Heroku.
             </Text>
             <Divider orientation='horizontal' />
@@ -40,9 +49,9 @@ export default function Experiencia() {
                 <Heading size='xs'> Sep 2017 - Oct 2018 </Heading>
             </HStack>
             <Text ml='12' mb='2' fontSize='14px'>
-                Encargado de sumar nuevos socios para el club de vinos.<br/>
+                Encargado de sumar nuevos socios para el club de vinos.<br />
                 Encargado de recopilar un registro de teléfonos relevantes para poder
-                realizar ventas en frio.<br/>
+                realizar ventas en frio.<br />
                 Aplicación de tecnicas de ventas y cumplimiento de estandares de calidad y
                 objetivos.
             </Text>
@@ -53,8 +62,8 @@ export default function Experiencia() {
                 <Heading size='xs'> Jun 2011 - May 2017 </Heading>
             </HStack>
             <Text ml='12' mb='2' fontSize='14px'>
-                Venta online de relojes importados.<br/>
-                Manejo de publicaciones en canales de venta.<br/>
+                Venta online de relojes importados.<br />
+                Manejo de publicaciones en canales de venta.<br />
                 Coordinación para la entrega con proveedores y clientes.
             </Text>
             <Divider orientation='horizontal' />

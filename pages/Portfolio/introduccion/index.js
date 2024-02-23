@@ -52,6 +52,7 @@ export default function Intro() {
     const [overview, isOverview] = useBoolean()
 
 
+
     return (
 
         <>
@@ -89,9 +90,11 @@ export default function Intro() {
                             <VStack >
                                 <Text p='3' alignItems='center' fontSize='md'
                                     color='blue.700'>
-                                    Soy <Highlight query={['Horacio', 'Capdevila']} styles={{ fontWeight: 'bold', color: 'teal' }}>Horacio Capdevila</Highlight>, estudiante avanzado de analisis de sistemas y desarrollador web
-                                    <br />Soy una persona detallista, que siempre busca aprender y mejorar mis habilidades.<br />
-                                    Actualmente estoy buscando un cambio laboral que me permita crecer personal y profesionalmente.
+                                    Soy <Highlight query={['Horacio', 'Capdevila']} styles={{ fontWeight: 'bold', color: 'teal' }}>Horacio Capdevila</Highlight>, analisis de sistemas y desarrollador web.
+                                    <br /> Me considero una persona detallista, siempre en búsqueda de oportunidades para aprender <br />
+                                    
+                                    y perfeccionar mis habilidades. Actualmente, estoy participando en el programa DCS de VTEX, donde me estoy especializando <br />
+                                    como experto en ecommerce. Al mismo tiempo,desempeño el rol de <b>Field Software Engineer</b> para la region APUB.
                                 </Text>
 
                                 <Flex direction='row'>
@@ -151,17 +154,18 @@ export default function Intro() {
 
                 <VStack justifySelf='center'>
 
-                    <a href='https://urlis.net/vtcz87j' target="_blank" rel="noopener noreferrer">
-                        <Button m='2' colorScheme='blue' rounded='full'> Descargar CV  <RiDownloadFill/></Button>
-                    </a>
+                   <a href='/assets/resume_HoracioCapdevila.pdf' download>
+                    <Button m='2' colorScheme='blue' rounded='full'> Descargar CV  <RiDownloadFill/></Button>
+                   </a>
+                    
                 </VStack>
 
                     <Divider/>
-                <Flex justifyContent='end' m='4'>
+                {/*<Flex justifyContent='end' m='4'>
                     <Link href='/Portfolio/proyectos'>
                         <Button colorScheme="teal" rounded="xl"> Ver proyectos <RiTerminalBoxLine /> </Button>
                     </Link>                   
-                </Flex>                         
+                  </Flex>*/}                        
 
             </GridItem>
 

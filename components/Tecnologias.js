@@ -102,11 +102,11 @@ export default function Tecnologias() {
             <Grid mt='2' mb='2' templateColumns='repeat(6, 1fr)' gap={6}>
                 <GridItem p='2' w='100%' h='20' bg='gray.200' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Next js' height='100%' width='100%' rounded='3xl'
-                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png' />
+                        src='https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/270271822-7d508468-319c-4576-90d3-45e6a54a16d4.jpg' />
                 </GridItem>
                 <GridItem p='2' w='100%' h='20' bg='gray.800' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='React js' height='100%' width='100%'
-                        src='https://techinfini.in/wp-content/uploads/2017/09/React-Logo-1.png' />
+                        src='https://static-00.iconduck.com/assets.00/react-javascript-js-framework-facebook-icon-2048x1822-f7kq7hho.png' />
                 </GridItem>
                 <GridItem pb='2' pt='2' w='100%' h='20' bg='#29bfb3' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Chakra UI' height='100%' width='100%' rounded='3xl'
@@ -118,7 +118,7 @@ export default function Tecnologias() {
                 </GridItem>
                 <GridItem w='100%' h='20' bg='white' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Angular js' height='100%' width='100%' rounded='3xl'
-                        src='https://www.marioperez.com.mx/wp-content/uploads/2014/03/angularJS.png' />
+                        src='https://seeklogo.com/images/A/angular-logo-B76B1CDE98-seeklogo.com.png' />
                 </GridItem>
                 <GridItem pt='2' pb='2' w='100%' h='20' bg='white' rounded='3xl' className='progLang' boxShadow='md'>
                     <Image alt='Express js' height='100%' width='100%' rounded='3xl'
