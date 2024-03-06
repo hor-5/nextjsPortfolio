@@ -92,7 +92,7 @@ export default function Intro() {
                                 <Text p='3' alignItems='center' fontSize='md'
                                     color='blue.700'>
                                     Soy <Highlight query={['Horacio', 'Capdevila']} styles={{ fontWeight: 'bold', color: 'teal' }}>Horacio Capdevila</Highlight>, analisis de sistemas y desarrollador web.
-                                    <br/> Actualmente, estoy participando en el <a target='_blank' href='https://careers.vtex.com/early-careers/digital-commerce-specialist-program/'><b style={{color:'#F71963'}}>Digital Commerce Specialist Program de VTEX</b></a> ,<br />
+                                    <br/> Actualmente, estoy participando en el <a target='_blank'rel="noreferrer" href='https://careers.vtex.com/early-careers/digital-commerce-specialist-program/'><b style={{color:'#F71963'}}>Digital Commerce Specialist Program de VTEX</b></a> ,<br />
                                      donde me estoy formando como experto en ecommerce, al mismo tiempo, <br/>desempeño el rol de <b>Field Software Engineer</b> para la region APUB<br/> 
                                       brindando apoyo a clientes y partners de la plataforma de VTEX.
                                 </Text>
