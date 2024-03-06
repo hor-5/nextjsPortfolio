@@ -1,33 +1,36 @@
-import React from 'react'
+import React, { useEffect, useRef,Suspense, lazy } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { Flex, Heading, Skeleton, 
-        Box, Button, VStack, Text, 
-        SlideFade,useColorModeValue,GridItem} from '@chakra-ui/react'
-import { Suspense,lazy } from 'react'
+import {
+    Flex, Heading, Skeleton,
+    Box, Button, VStack, Text,
+    SlideFade, useColorModeValue, GridItem
+} from '@chakra-ui/react'
 import { ColorModeSwitcher } from '../../components/ColorModeSwitcher'
-import dynamic from 'next/dynamic'
-const Lottie = dynamic(()=>import('react-lottie'))
-import * as animationData from '../../public/lottie-files/home.json'
 import Carousel from '../../components/Carousel'
+import { CiLocationArrow1 } from "react-icons/ci";
 
 //Lotie animation
 function HomeLottie() {
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
-    };
+    const ref = useRef(null);
+    React.useEffect(() => {
+        import("@lottiefiles/lottie-player");
+    });
 
     return (
         <>
-            <Lottie options={defaultOptions}
+            <lottie-player
+                id="HomeLottie"
+                ref={ref}
+                autoplay
+                loop
+                mode="normal"
+                src="/assets/home.json"
                 height={400}
-                width={400}/>
+                width={400}
+            ></lottie-player>
+
         </>
     )
 }
@@ -41,34 +44,34 @@ export default function Portfolio() {
                 <title>Inicio</title>
             </Head>
             <SlideFade in={true} offsetY='50px'>
-                <GridItem direction="row" height="100vh" justifyContent="center" alignItems="center" bg={useColorModeValue("blue.50",'blue.800')}>
+                <GridItem direction="row" height="100vh" justifyContent="center" alignItems="center" bg={useColorModeValue("blue.50", 'blue.800')}>
                     <Flex justifyContent='end'>
-                        <ColorModeSwitcher/>
+                        <ColorModeSwitcher />
                     </Flex>
                     <Flex height="350" width="300" justifyContent="center">
                         <Suspense fallback={<Skeleton height="200px" width="200px" />} >
                             <HomeLottie/>
-                        </Suspense>                        
+                        </Suspense>
                     </Flex>
                     <VStack>
                         <Heading textAlign='center'
-                                    size="2xl" 
-                                    color={useColorModeValue("blue.700",'whiteAlpha.900')}>
-                            Bienvenido a mi portfolio
+                            size="2xl"
+                            color={useColorModeValue("blue.700", 'whiteAlpha.900')}>
+                            Bienvenido/a!
                         </Heading>
                         <Text p='2'
-                              textAlign='center'
-                              fontSize='md' 
-                              color={useColorModeValue("blue.700",'whiteAlpha.900')}> 
-                            Donde vas a poder conocer un poco sobre mi.
+                            textAlign='center'
+                            fontSize='md'
+                            color={useColorModeValue("blue.700", 'whiteAlpha.900')}>
+                            Presioná continuar para conocer mejor mi perfil profesional.
                         </Text>
                         <Link href='/Portfolio/introduccion'>
-                            <Button className='btn' rounded="full" color="whiteAlpha.900">¡Empecemos!</Button>
+                            <Button className='btn' rounded="full" color="whiteAlpha.900">Continuar <CiLocationArrow1 /></Button>
                         </Link>
 
                     </VStack>
 
-                    
+
 
                 </GridItem>
             </SlideFade>

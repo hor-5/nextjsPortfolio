@@ -75,7 +75,7 @@ export default function CardProyecto(props) {
           <ButtonGroup spacing='6'>
             <a href={props.linkGithub} target="_blank" rel="noreferrer">
               <IconButton
-                colorScheme='cyan'
+                colorScheme={props.linkGithub?'cyan':'gray'}
                 color={useColorModeValue('white', 'blue.800')}
                 rounded='full'
                 aria-label='Call Sage'
@@ -86,7 +86,7 @@ export default function CardProyecto(props) {
             </a>
             <a href={props.linkTestOnline} target="_blank" rel="noreferrer">
               <IconButton
-                colorScheme='cyan'
+                colorScheme={props.linkTestOnline?'cyan':'gray'}
                 color={useColorModeValue('white', 'blue.800')}
                 rounded='full'
                 aria-label='Call Sage'

@@ -10,36 +10,37 @@ import {
     DrawerContent,
     DrawerCloseButton, useDisclosure, Highlight,
     useColorModeValue, GridItem, useBoolean,
-    Spacer, SkeletonCircle, CircularProgress, 
+    Spacer, SkeletonCircle, CircularProgress,
     Divider
 } from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
-import { Suspense } from 'react'
+import React,{useRef,useEffect, Suspense } from 'react'
 import Experiencia from '../../../components/Experiencia'
 import OverviewSection from '../../../components/Overview'
 import { ColorModeSwitcher } from '../../../components/ColorModeSwitcher'
-import dynamic from 'next/dynamic'
-const Lottie = dynamic(() => import('react-lottie'))
-import * as animationData from '../../../public/lottie-files/computer.json'
-import { RiLinkedinFill, RiGithubLine,RiDownloadFill,RiTerminalBoxLine } from "react-icons/ri"
+import { RiLinkedinFill, RiGithubLine, RiDownloadFill, RiTerminalBoxLine } from "react-icons/ri"
 
 //Lotie animation
 function ComputerLottie() {
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
-    };
+    const ref = useRef(null);
+    React.useEffect(() => {
+      import("@lottiefiles/lottie-player");
+    });
 
     return (
         <>
-            <Lottie options={defaultOptions}
+            <lottie-player
+                id="computer"
+                ref={ref}
+                autoplay
+                loop
+                mode="normal"
+                src="/assets/computer.json"
                 height={200}
-                width={200} />
+                width={200} 
+            ></lottie-player>
+
         </>
     )
 }
@@ -74,7 +75,7 @@ export default function Intro() {
 
 
                 <VStack size='md'>
-                    <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> Sobre mi...</Heading>
+                    <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> </Heading>
                     <ScaleFade initialScale={0.9} in={true} >
                         <Flex alignItems='center' p='7' mt='2' direction="row"
                             bg={useColorModeValue('gray.50', 'gray.300')}
@@ -82,7 +83,7 @@ export default function Intro() {
                             <VStack alignItems='center'>
                                 <WrapItem>
                                     <Suspense fallback={<SkeletonCircle size='30' />}>
-                                        <Avatar size='xl' boxShadow='md' name='Horacio Capdevila' src='/assets/avatar.png' />
+                                        <Avatar objectFit="contain" size='xl' boxShadow='md' name='Horacio Capdevila' src='/assets/avatar.png' />
                                     </Suspense>
 
                                 </WrapItem>
@@ -91,10 +92,9 @@ export default function Intro() {
                                 <Text p='3' alignItems='center' fontSize='md'
                                     color='blue.700'>
                                     Soy <Highlight query={['Horacio', 'Capdevila']} styles={{ fontWeight: 'bold', color: 'teal' }}>Horacio Capdevila</Highlight>, analisis de sistemas y desarrollador web.
-                                    <br /> Me considero una persona detallista, siempre en búsqueda de oportunidades para aprender <br />
-                                    
-                                    y perfeccionar mis habilidades. Actualmente, estoy participando en el programa DCS de VTEX, donde me estoy especializando <br />
-                                    como experto en ecommerce. Al mismo tiempo,desempeño el rol de <b>Field Software Engineer</b> para la region APUB.
+                                    <br/> Actualmente, estoy participando en el <a target='_blank' href='https://careers.vtex.com/early-careers/digital-commerce-specialist-program/'><b style={{color:'#F71963'}}>Digital Commerce Specialist Program de VTEX</b></a> ,<br />
+                                     donde me estoy formando como experto en ecommerce, al mismo tiempo, <br/>desempeño el rol de <b>Field Software Engineer</b> para la region APUB<br/> 
+                                      brindando apoyo a clientes y partners de la plataforma de VTEX.
                                 </Text>
 
                                 <Flex direction='row'>
@@ -154,18 +154,18 @@ export default function Intro() {
 
                 <VStack justifySelf='center'>
 
-                   <a href='/assets/resume_HoracioCapdevila.pdf' download>
-                    <Button m='2' colorScheme='blue' rounded='full'> Descargar CV  <RiDownloadFill/></Button>
-                   </a>
-                    
+                    <a href='/assets/resume_HoracioCapdevila.pdf' download>
+                        <Button m='2' colorScheme='blue' rounded='full'> Descargar CV  <RiDownloadFill /></Button>
+                    </a>
+
                 </VStack>
 
-                    <Divider/>
-                {/*<Flex justifyContent='end' m='4'>
+                <Divider />
+                <Flex justifyContent='end' m='4'>
                     <Link href='/Portfolio/proyectos'>
                         <Button colorScheme="teal" rounded="xl"> Ver proyectos <RiTerminalBoxLine /> </Button>
                     </Link>                   
-                  </Flex>*/}                        
+                  </Flex>
 
             </GridItem>
 
