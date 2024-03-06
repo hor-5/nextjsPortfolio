@@ -6,7 +6,6 @@ import {
 import Link from 'next/link'
 import Head from 'next/head'
 import React,{ Suspense, lazy,useEffect,useRef } from 'react'
-import dynamic from 'next/dynamic'
 
 
 //Lotie animation
