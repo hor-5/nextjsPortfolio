@@ -75,7 +75,7 @@ export default function Intro() {
 
 
                 <VStack size='md'>
-                    <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}> </Heading>
+                    <Heading size="2xl" color={useColorModeValue("blue.700", 'whiteAlpha.900')}>Sobre mi </Heading>
                     <ScaleFade initialScale={0.9} in={true} >
                         <Flex alignItems='center' p='7' mt='2' direction="row"
                             bg={useColorModeValue('gray.50', 'gray.300')}
