@@ -13,6 +13,7 @@ import {
   CircularProgress,
   Container,
   Badge,
+  useBreakpointValue,
 } from "@chakra-ui/react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
@@ -91,6 +92,13 @@ function LinksLottie() {
   const ref = useRef(null)
   const [isClient, setIsClient] = useState(false)
 
+  // Tamaño responsivo para la animación Lottie
+  const animationSize = useBreakpointValue({
+    base: { width: "180px", height: "180px" }, // Más pequeño en móviles
+    sm: { width: "220px", height: "220px" }, // Tamaño medio en tablets
+    md: { width: "300px", height: "300px" }, // Tamaño original en desktop
+  })
+
   useEffect(() => {
     setIsClient(true)
     import("@lottiefiles/lottie-player")
@@ -122,7 +130,7 @@ function LinksLottie() {
         loop
         mode="normal"
         src="/assets/laptopLinks.json"
-        style={{ width: "300px", height: "300px" }}
+        style={animationSize}
       ></lottie-player>
     </MotionBox>
   )
@@ -144,11 +152,18 @@ function LinkItem({ icon, text, href, index }) {
   const iconBg = useColorModeValue("orange.100", "orange.700")
   const circleBg = useColorModeValue("white", "gray.800")
 
+  // Ajustar tamaño del botón para móviles
+  const buttonHeight = useBreakpointValue({ base: "60px", md: "65px" })
+  const buttonPadding = useBreakpointValue({ base: 4, md: 5 })
+  const iconSize = useBreakpointValue({ base: 5, md: 6 })
+  const fontSize = useBreakpointValue({ base: "md", md: "lg" })
+  const marginBottom = useBreakpointValue({ base: 3, md: 5 })
+
   return (
     <MotionBox
       variants={itemVariants}
       position="relative"
-      mb={5}
+      mb={marginBottom}
       whileHover={{ scale: 1.02, y: -3 }}
       whileTap={{ scale: 0.98 }}
       custom={index}
@@ -187,11 +202,11 @@ function LinkItem({ icon, text, href, index }) {
         <Button
           as="a"
           width="100%"
-          height="65px" // Ligeramente más pequeño para sensación de ligereza
+          height={buttonHeight}
           bg={buttonBg}
           color={buttonColor}
           rounded="2xl"
-          p={5}
+          p={buttonPadding}
           boxShadow={useColorModeValue(
             "0 8px 12px -3px rgba(0, 0, 0, 0.1), 0 3px 4px -2px rgba(0, 0, 0, 0.05)",
             "0 8px 12px -3px rgba(0, 0, 0, 0.2), 0 3px 4px -2px rgba(0, 0, 0, 0.1)",
@@ -223,12 +238,12 @@ function LinkItem({ icon, text, href, index }) {
           />
 
           <HStack width="100%" justifyContent="space-between" position="relative" zIndex={1}>
-            <HStack spacing={4}>
+            <HStack spacing={3}>
               <MotionFlex
                 bg={isHovered ? "white" : iconBg}
                 color={isHovered ? "orange.500" : "inherit"}
                 borderRadius="xl"
-                p={3}
+                p={2.5}
                 justifyContent="center"
                 alignItems="center"
                 animate={{
@@ -241,12 +256,12 @@ function LinkItem({ icon, text, href, index }) {
                 }}
                 boxShadow={isHovered ? "0 0 0 3px rgba(255,255,255,0.3)" : "none"}
               >
-                <Icon as={icon} boxSize={6} />
+                <Icon as={icon} boxSize={iconSize} />
               </MotionFlex>
               <VStack align="start" spacing={0}>
                 <MotionText
                   fontWeight="bold"
-                  fontSize="lg"
+                  fontSize={fontSize}
                   animate={{
                     y: isHovered ? [-1, 0] : 0,
                     transition: { duration: 0.2 },
@@ -313,6 +328,17 @@ export default function LinkTree() {
   const tagBg = useColorModeValue("white", "gray.700")
   const tagBorderColor = useColorModeValue("gray.100", "gray.600")
 
+  // Ajustes responsivos para el layout
+  const containerPadding = useBreakpointValue({ base: 4, md: 8, lg: 12 })
+  const cardPadding = useBreakpointValue({ base: 6, md: 8, lg: 12 })
+  const headingSize = useBreakpointValue({ base: "lg", md: "xl" })
+  const subHeadingSize = useBreakpointValue({ base: "md", md: "lg" })
+  const marginBottom = useBreakpointValue({ base: 6, md: 10 })
+  const marginRight = useBreakpointValue({ base: 0, md: 12 })
+  const animationPadding = useBreakpointValue({ base: 4, md: 6 })
+  const tagBottomPosition = useBreakpointValue({ base: "-10px", md: "-15px" })
+  const tagFontSize = useBreakpointValue({ base: "xs", md: "sm" })
+
   useEffect(() => {
     setIsMounted(true)
   }, [])
@@ -349,7 +375,7 @@ export default function LinkTree() {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      p={4}
+      p={containerPadding}
       position="relative"
       overflow="hidden"
     >
@@ -390,7 +416,7 @@ export default function LinkTree() {
           direction={{ base: "column", md: "row" }}
           bg={cardBg}
           backdropFilter="blur(20px)"
-          p={{ base: 8, md: 12 }}
+          p={cardPadding}
           rounded="3xl"
           boxShadow="xl"
           position="relative"
@@ -403,8 +429,8 @@ export default function LinkTree() {
             direction="column"
             alignItems="center"
             justifyContent="center"
-            mb={{ base: 10, md: 0 }}
-            mr={{ base: 0, md: 12 }}
+            mb={marginBottom}
+            mr={marginRight}
             position="relative"
           >
             <MotionBox
@@ -418,7 +444,7 @@ export default function LinkTree() {
               }}
               bg={animationBg}
               borderRadius="2xl"
-              p={6}
+              p={animationPadding}
               boxShadow="lg"
               backdropFilter="blur(10px)"
               border="1px solid"
@@ -446,10 +472,10 @@ export default function LinkTree() {
                 delay: 0.5,
               }}
               position="absolute"
-              bottom="-15px"
+              bottom={tagBottomPosition}
               bg={tagBg}
-              px={4}
-              py={2}
+              px={3}
+              py={1.5}
               borderRadius="full"
               boxShadow="md"
               border="1px solid"
@@ -464,7 +490,7 @@ export default function LinkTree() {
               }}
             >
               <MotionText
-                fontSize="sm"
+                fontSize={tagFontSize}
                 fontWeight="bold"
                 bgGradient="linear(to-r, orange.400, red.400)"
                 bgClip="text"
@@ -483,7 +509,7 @@ export default function LinkTree() {
           </Flex>
 
           {/* Right side - Links */}
-          <MotionVStack variants={itemVariants} spacing={4} align="stretch" width={{ base: "100%", md: "400px" }}>
+          <MotionVStack variants={itemVariants} spacing={3} align="stretch" width={{ base: "100%", md: "400px" }}>
             <MotionBox
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -494,7 +520,7 @@ export default function LinkTree() {
               }}
             >
               <Heading
-                size="xl"
+                size={headingSize}
                 mb={2}
                 color={headingColor}
                 bgGradient="linear(to-r, orange.400, red.400)"
@@ -503,13 +529,13 @@ export default function LinkTree() {
               >
                 Conectemos
               </Heading>
-              <Text color={subHeadingColor} mb={8} fontSize="lg">
+              <Text color={subHeadingColor} mb={4} fontSize={subHeadingSize}>
                 Encuentra todos mis perfiles profesionales aquí
               </Text>
             </MotionBox>
 
             {/* Tree structure with vertical line */}
-            <Box position="relative" pl={6} mt={4}>
+            <Box position="relative" pl={6} mt={2}>
               {/* Vertical line con animación más fluida */}
               <MotionBox
                 variants={lineVariants}
