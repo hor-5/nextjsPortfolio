@@ -12,10 +12,18 @@ export default function Experiencia() {
             <HStack my='2'>
                 <Avatar size='md' boxShadow='md' name='VTEX' src='https://vtex.com/wp-content/uploads/2020/04/VTEX-Brand.svg' />
                 <Heading size='md'> VTEX </Heading>
-                <Heading size='xs'> Ene 2023 - Actualidad </Heading>
+                <Heading size='xs'> Jul 2023 - Dic 2024 </Heading>
             </HStack>
             <Text ml='12' mb='2' fontSize='14px'>
-            Actualmente, ocupo el puesto de Field Software Engineer en el equipo de APUB en VTEX, donde proporciono apoyo y asistencia técnica a socios y clientes de la plataforma. Este rol me ha brindado la oportunidad de profundizar en el funcionamiento de la plataforma y sus diversos módulos, así como en la interacción entre ellos. Además, he adquirido experiencia en el uso de las APIs de cada módulo y en tecnologías como VTEX IO.
+                Me desempeñé como Commerce Engineer en el equipo de APUB(Arg,Pe,Uy,Bol), gestionando más de 30 cuentas en VTEX con el objetivo de impulsar el crecimiento de cada ecommerce, desarrollando y ejecutando roadmaps estratégicos de mejoras. Proporcioné asesoramiento y capacitación sobre las herramientas y funcionalidades tecnologicas de VTEX  con el objetivo de potenciar el crecimiento de cada cuenta y la correcta implementación y aprovechamiento de la plataforma.
+            </Text>
+            <HStack my='2'>
+                <Avatar size='md' boxShadow='md' name='VTEX' src='https://vtex.com/wp-content/uploads/2020/04/VTEX-Brand.svg' />
+                <Heading size='md'> VTEX </Heading>
+                <Heading size='xs'> Ene 2023 - Jul 2024 </Heading>
+            </HStack>
+            <Text ml='12' mb='2' fontSize='14px'>
+                Me desempeñé como Field Software Engineer en los equipos de APUB(Arg,Pe,Uy,Bol) y SOLA(South Latam + Mx & Us) en VTEX, donde proporciono apoyo y asistencia técnica a socios y clientes de la plataforma. Este rol me ha brindado la oportunidad de profundizar en el funcionamiento de la plataforma y sus diversos módulos, así como en la interacción entre ellos. Además, he adquirido experiencia en el uso de las APIs de cada módulo y en tecnologías como VTEX IO.
             </Text>
             <Divider orientation='horizontal' />
             <HStack my='2'>
@@ -58,7 +66,7 @@ export default function Experiencia() {
             <Divider orientation='horizontal' />
             <HStack my='2'>
                 <Avatar size='md' boxShadow='md' name='Luxury watches' src='https://www.alti.rs/pub/media/wysiwyg/slider/rolexwatchesads01.jpg' />
-                <Heading size='md'> Venta online de relojes </Heading>
+                <Heading size='md'> Vendedor ecommerce </Heading>
                 <Heading size='xs'> Jun 2011 - May 2017 </Heading>
             </HStack>
             <Text ml='12' mb='2' fontSize='14px'>

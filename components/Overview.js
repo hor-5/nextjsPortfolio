@@ -19,7 +19,7 @@ export default function OverviewSection() {
             <HStack my='2'>
                 <Avatar size='md' boxShadow='md' name='EICOM' src='/assets/eicom_logo.jpg' />
                 <Heading size='xs'> EICOM Institute </Heading>
-                <Heading size='xs'> Agosto 2023 - Actualidad </Heading>
+                <Heading size='xs'> Agosto 2023 - Junio 2024 </Heading>
             </HStack>
             <Text ml='12' fontWeight='bolder'>Ecommerce Solution Architect</Text>
             <Text ml='12' mb='2' fontSize='13px' >

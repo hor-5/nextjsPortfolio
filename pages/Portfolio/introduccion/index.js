@@ -91,10 +91,17 @@ export default function Intro() {
                             <VStack >
                                 <Text p='3' alignItems='center' fontSize='md'
                                     color='blue.700'>
-                                    Soy <Highlight query={['Horacio', 'Capdevila']} styles={{ fontWeight: 'bold', color: 'teal' }}>Horacio Capdevila</Highlight>, analisis de sistemas y desarrollador web.
-                                    <br/> Actualmente, estoy participando en el <a target='_blank'rel="noreferrer" href='https://careers.vtex.com/early-careers/digital-commerce-specialist-program/'><b style={{color:'#F71963'}}>Digital Commerce Specialist Program de VTEX</b></a> ,<br />
-                                     donde me estoy formando como experto en ecommerce, al mismo tiempo, <br/>desempeño el rol de <b>Field Software Engineer</b> para la region APUB<br/> 
-                                      brindando apoyo a clientes y partners de la plataforma de VTEX.
+                                    Soy <Highlight query={['Horacio', 'Capdevila']} styles={{ fontWeight: 'bold', color: 'teal' }}>Horacio Capdevila</Highlight>, analisis de sistemas y desarrollador web.<br/>
+                                    En mi última experiencia en VTEX, me desempeñé como Commerce Engineer y Field Software Engineer,<br/>
+                                    formando parte del programa Digital Commerce Specialist, donde me capacité como experto en ecommerce<br/>
+                                    e Ecommerce Solution Architect.<br/>
+                                    A lo largo de mi carrera trabajé con diversas tecnologías y lenguajes de programación,<br/>
+                                    lo que me brindó adaptabilidad y flexibilidad para desarrollar.<br/>
+                                    Hoy en día, mi stack principal se centra en <Highlight query={['Next.js y', 'C# .NET']} styles={{ fontWeight: 'bold', color: 'teal' }}>Next.js y C# .NET.</Highlight>
+                                     
+                    
+
+                                        
                                 </Text>
 
                                 <Flex direction='row'>
