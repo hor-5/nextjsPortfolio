@@ -14,7 +14,7 @@ import {
   Container,
   Badge,
 } from "@chakra-ui/react"
-import { motion, AnimatePresence, useSpring } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 import { FaGithub, FaLinkedin, FaWhatsapp, FaBriefcase } from "react-icons/fa"
@@ -130,50 +130,34 @@ function LinksLottie() {
 
 // Componente de Link individual con animaciones optimizadas
 function LinkItem({ icon, text, href, index }) {
+  // Todos los hooks al inicio del componente
   const [isHovered, setIsHovered] = useState(false)
-  const buttonBgLight = "rgba(255, 255, 255, 0.8)"
-  const buttonBgDark = "rgba(45, 55, 72, 0.8)"
-  const buttonHoverBgLight = "linear-gradient(135deg, #ff9966 0%, #ff5e62 100%)"
-  const buttonHoverBgDark = "linear-gradient(135deg, #ff5e62 0%, #ff9966 100%)"
-  const buttonColorLight = "gray.700"
-  const buttonColorDark = "white"
-  const iconBgLight = "orange.100"
-  const iconBgDark = "orange.700"
 
-  const buttonBg = useColorModeValue(buttonBgLight, buttonBgDark)
-  const buttonHoverBg = useColorModeValue(buttonHoverBgLight, buttonHoverBgDark)
-  const buttonColor = useColorModeValue(buttonColorLight, buttonColorDark)
+  // Mover todos los useColorModeValue al nivel superior
+  const buttonBg = useColorModeValue("rgba(255, 255, 255, 0.8)", "rgba(45, 55, 72, 0.8)")
+  const buttonHoverBg = useColorModeValue(
+    "linear-gradient(135deg, #ff9966 0%, #ff5e62 100%)",
+    "linear-gradient(135deg, #ff5e62 0%, #ff9966 100%)",
+  )
+  const buttonColor = useColorModeValue("gray.700", "white")
   const buttonHoverColor = "white"
-  const iconBg = useColorModeValue(iconBgLight, iconBgDark)
-
-  // Animación de spring para el hover
-  const scaleSpring = useSpring(1, {
-    stiffness: 400,
-    damping: 17,
-  })
-
-  const ySpring = useSpring(0, {
-    stiffness: 400,
-    damping: 20,
-  })
-
-  useEffect(() => {
-    scaleSpring.set(isHovered ? 1.02 : 1)
-    ySpring.set(isHovered ? -3 : 0)
-  }, [isHovered, scaleSpring, ySpring])
+  const iconBg = useColorModeValue("orange.100", "orange.700")
+  const circleBg = useColorModeValue("white", "gray.800")
 
   return (
     <MotionBox
       variants={itemVariants}
       position="relative"
       mb={5}
-      style={{
-        scale: scaleSpring,
-        y: ySpring,
-      }}
+      whileHover={{ scale: 1.02, y: -3 }}
       whileTap={{ scale: 0.98 }}
       custom={index}
       perspective={1000}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 17,
+      }}
     >
       {/* Circle connector with pulse animation */}
       <MotionBox
@@ -183,7 +167,7 @@ function LinkItem({ icon, text, href, index }) {
         width="20px"
         height="20px"
         borderRadius="full"
-        bg={useColorModeValue("white", "gray.800")}
+        bg={circleBg}
         border="3px solid"
         borderColor="orange.400"
         zIndex={1}
@@ -302,6 +286,9 @@ function LinkItem({ icon, text, href, index }) {
                   },
                 }}
               >
+                <Badge colorScheme="green" variant="solid" borderRadius="full" px={2}>
+                  Nuevo
+                </Badge>
               </MotionBox>
             )}
           </HStack>
@@ -314,19 +301,24 @@ function LinkItem({ icon, text, href, index }) {
 // Componente principal
 export default function LinkTree() {
   const [isMounted, setIsMounted] = useState(false)
-  const bgColorLight = "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
-  const bgColorDark = "linear-gradient(135deg, #2d3748 0%, #1a202c 100%)"
-  const cardBgLight = "rgba(255, 255, 255, 0.7)"
-  const cardBgDark = "rgba(26, 32, 44, 0.7)"
-  const headingColorLight = "gray.700"
-  const headingColorDark = "white"
-  const subHeadingColorLight = "gray.500"
-  const subHeadingColorDark = "gray.300"
 
-  const bgColor = useColorModeValue(bgColorLight, bgColorDark)
-  const cardBg = useColorModeValue(cardBgLight, cardBgDark)
-  const headingColor = useColorModeValue(headingColorLight, headingColorDark)
-  const subHeadingColor = useColorModeValue(subHeadingColorLight, subHeadingColorDark)
+  // Todos los hooks al inicio del componente
+  const bgColor = useColorModeValue(
+    "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+    "linear-gradient(135deg, #2d3748 0%, #1a202c 100%)",
+  )
+  const cardBg = useColorModeValue("rgba(255, 255, 255, 0.7)", "rgba(26, 32, 44, 0.7)")
+  const headingColor = useColorModeValue("gray.700", "white")
+  const subHeadingColor = useColorModeValue("gray.500", "gray.300")
+  const borderColor = useColorModeValue("gray.200", "gray.700")
+  const animationBg = useColorModeValue("rgba(255, 255, 255, 0.7)", "rgba(45, 55, 72, 0.7)")
+  const animationBorderColor = useColorModeValue("gray.100", "gray.600")
+  const tagBg = useColorModeValue("white", "gray.700")
+  const tagBorderColor = useColorModeValue("gray.100", "gray.600")
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   // Definimos los links que queremos mostrar
   const links = [
@@ -342,10 +334,6 @@ export default function LinkTree() {
     { top: "60%", left: "5%", size: "150px", color: "red.300", delay: 1 },
     { bottom: "10%", right: "20%", size: "120px", color: "yellow.300", delay: 2 },
   ]
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
 
   // Si no está montado, mostramos un esqueleto básico para evitar errores de hidratación
   if (!isMounted) {
@@ -411,7 +399,7 @@ export default function LinkTree() {
           position="relative"
           overflow="hidden"
           border="1px solid"
-          borderColor={useColorModeValue("gray.200", "gray.700")}
+          borderColor={borderColor}
         >
           {/* Left side - Animation */}
           <Flex
@@ -431,13 +419,13 @@ export default function LinkTree() {
                 damping: 20,
                 delay: 0.2,
               }}
-              bg={useColorModeValue("rgba(255, 255, 255, 0.7)", "rgba(45, 55, 72, 0.7)")}
+              bg={animationBg}
               borderRadius="2xl"
               p={6}
               boxShadow="lg"
               backdropFilter="blur(10px)"
               border="1px solid"
-              borderColor={useColorModeValue("gray.100", "gray.600")}
+              borderColor={animationBorderColor}
               whileHover={{
                 y: -5,
                 transition: {
@@ -462,13 +450,13 @@ export default function LinkTree() {
               }}
               position="absolute"
               bottom="-15px"
-              bg={useColorModeValue("white", "gray.700")}
+              bg={tagBg}
               px={4}
               py={2}
               borderRadius="full"
               boxShadow="md"
               border="1px solid"
-              borderColor={useColorModeValue("gray.100", "gray.600")}
+              borderColor={tagBorderColor}
               whileHover={{
                 scale: 1.05,
                 transition: {
@@ -548,7 +536,6 @@ export default function LinkTree() {
                 ))}
               </AnimatePresence>
             </Box>
-
 
           </MotionVStack>
         </MotionFlex>
