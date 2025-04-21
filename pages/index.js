@@ -286,9 +286,6 @@ function LinkItem({ icon, text, href, index }) {
                   },
                 }}
               >
-                <Badge colorScheme="green" variant="solid" borderRadius="full" px={2}>
-                  Nuevo
-                </Badge>
               </MotionBox>
             )}
           </HStack>
